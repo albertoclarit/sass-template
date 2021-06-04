@@ -24,10 +24,19 @@ $enable-shadows: true;
 $body-color: #333;
 $body-bg: #fff;
 $border-radius: .4rem;
-$success: #7952b3;
 
+$primary: #129DEB; $primary2: #0072B1;
+$secondary: #61737D; $secondary2: #2D323C;
+$success: #0CC134; $success2: #009B22;
+$danger: #FB2D00; $danger2: #C62400;
+$warning: #FFBE15; $warning2: #DEA000;
+$info: #1DCCF2; $info2: #0093B4;
+$light: #F4F9FB; $light2: #CEE0EA;
+$dark: #2D323C; $dark2: #000;
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Open+Sans:wght@300&display=swap');
 @import "bootstrap/scss/bootstrap";
 
 // Option 2
@@ -89,11 +98,6 @@ $success: #7952b3;
 //
 @import "icon-list";
 
-
-
-body {
-
-}
 
 // Style Bootstrap icons
 .bi {
