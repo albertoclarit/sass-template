@@ -14,7 +14,27 @@
 <!-- i put style coz it's not working in SCSS -->
 <body>
   <div class="row d-md-block">
-    <div class="col-md-10 ms-auto bg-info float-end"> top nav </div>
+    <div class="col-md-10 ms-auto float-end">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom"> <!-- navbar-dark-custom is a customized dark color-->
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+            <span class="navbar-text">Team Key Bridge</span>
+          </div>
+        </div>
+      </nav>
+    </div>
+
     <div class="col-md-2 me-auto bg-dark p-4 float-start" id="sidenav"> 
       KEYBRIDGE logo
       <hr>
@@ -84,9 +104,7 @@
       </ul>
     </div>
 
-    <main class="col-md-10 ms-auto bg-success">
-      main
-    </main>
+    
 </div>
 </body>
 </html>
