@@ -9,13 +9,6 @@
 // `$body-color` or write more CSS that override's Bootstrap's CSS like so:
 // `body { color: red; }`.
 
-
-//
-// Bring in Bootstrap
-//
-
-// Option 1
-//
 // Import all of Bootstrap's CSS
 $enable-gradients: true;
 $enable-shadows: true;
@@ -25,7 +18,7 @@ $enable-shadows: true;
 // $body-bg: #fff;
 // $border-radius: .4rem;
 
-$primary: #129DEB; $primary2: #0072B1; 
+$primary: #129DEB; $primary2: #0072B1;
 $secondary: #61737D; $secondary2: #2D323C;
 $success: #0CC134; $success2: #009B22;
 $danger: #FB2D00; $danger2: #C62400;
@@ -39,68 +32,47 @@ $dark: #2D323C; $dark2: #000;
 @import url('https://fonts.googleapis.com/css2?family=Monda:wght@400;700&family=Open+Sans:wght@300&display=swap');
 @import "bootstrap/scss/bootstrap";
 
-// Option 2
-//
-// Place variable overrides first, then import just the styles you need. Note that some stylesheets are required no matter what.
+// customized
+@import "_buttons.scss";
+@import "_navbars.scss";
+@import "_typography.scss";
 
-//// Toggle global options
-$enable-gradients: true;
-$enable-shadows: true;
-//
-//// Customize some defaults
-//$body-color: #333;
-//$body-bg: #fff;
-//$border-radius: .4rem;
-//$success: #7952b3;
+// @import "bootstrap/scss/functions"; // Required
+// @import "bootstrap/scss/variables"; // Required
+// @import "bootstrap/scss/mixins"; // Required
+// //
+// @import "bootstrap/scss/root"; // Required
+// @import "bootstrap/scss/reboot"; // Required
+// @import "bootstrap/scss/type";
+// @import "bootstrap/scss/images";
+// @import "bootstrap/scss/code";
 
-
-@import "bootstrap/scss/functions"; // Required
-@import "bootstrap/scss/variables"; // Required
-@import "bootstrap/scss/mixins"; // Required
-//
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
-@import "bootstrap/scss/type";
-@import "bootstrap/scss/images";
-@import "bootstrap/scss/code";
-
-@import "bootstrap/scss/grid";
-@import "bootstrap/scss/tables";
-@import "bootstrap/scss/forms";
-@import "bootstrap/scss/buttons";
-@import "bootstrap/scss/transitions";
-@import "bootstrap/scss/dropdown";
-@import "bootstrap/scss/button-group";
-@import "bootstrap/scss/input-group"; // Requires forms
-@import "bootstrap/scss/custom-forms";
-@import "bootstrap/scss/nav";
-@import "bootstrap/scss/navbar"; // Requires nav
-@import "bootstrap/scss/card";
-@import "bootstrap/scss/breadcrumb";
-@import "bootstrap/scss/pagination";
-@import "bootstrap/scss/badge";
-@import "bootstrap/scss/jumbotron";
-@import "bootstrap/scss/alert";
-@import "bootstrap/scss/progress";
-@import "bootstrap/scss/media";
-@import "bootstrap/scss/list-group";
-@import "bootstrap/scss/close";
-@import "bootstrap/scss/toasts";
-@import "bootstrap/scss/modal"; // Requires transitions
-@import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
-@import "bootstrap/scss/carousel";
-@import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities";
-@import "bootstrap/scss/print";
-
-//
-// Custom styles
-//
-@import "icon-list";
-
-
-// Style Bootstrap icons
-.bi {
-  fill: currentColor;
-}
+// @import "bootstrap/scss/grid";
+// @import "bootstrap/scss/tables";
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+// @import "bootstrap/scss/transitions";
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+// @import "bootstrap/scss/input-group"; // Requires forms
+// @import "bootstrap/scss/custom-forms";
+// @import "bootstrap/scss/nav";
+// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/jumbotron";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/media";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/utilities";
+// @import "bootstrap/scss/print";

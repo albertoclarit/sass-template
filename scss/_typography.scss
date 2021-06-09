@@ -1,0 +1,24 @@
+//typography
+//default font is Open Sans
+//header font is Roboto Condensed
+//tokens, IP, etc are Monda
+
+body {
+    color:$secondary;
+    font-family: Open Sans;
+  }
+  h1 {
+    font-family:Roboto Condensed;
+    color:$secondary;
+    font-size:70px;
+    line-height: 60px;
+  }
+  
+  //form
+  .form-label {
+    font-size: 12px;
+  }
+  
+  .token-label {
+    font-family: Monda;
+  }
