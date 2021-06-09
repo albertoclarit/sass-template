@@ -1,0 +1,59 @@
+//button hover
+.btn i {
+  vertical-align: .125em;
+}
+
+.btn-primary {
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background-color:$primary2;
+    }
+  }
+  
+  .btn-success {
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background-color:$success2;
+    }
+  }
+  
+  .btn-danger {
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background-color:$danger2;
+    }
+  }
+  
+  .btn-warning {
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background-color:$warning2;
+    }
+  }
+  
+  .btn-info {
+    color:#fff;
+    &:hover {
+      color:#fff;
+      background-color:$info2;
+    }
+  }
+  
+  .btn-light {
+    color:$secondary;
+    &:hover {
+      color:$secondary;
+      background-color:$light2;
+    }
+  }
+  .btn-outline-light {
+    color:$primary;
+    &:hover {
+      color:$secondary;
+      background-color:$light2;
+    }
+  }
