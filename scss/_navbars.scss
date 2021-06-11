@@ -1,6 +1,20 @@
 // navigation
-#sidebar {
+#sidenav {
     height: 100vh;
+    min-width: 200px;
+    color:$light;
+}
+
+#sidenav a {
+    color:$light;
+}
+
+#sidenav a.active:hover {
+    color:#fff;
+}
+
+#sidenav a:hover {
+    color:$info;
 }
 
 .navbar-dark-custom {
