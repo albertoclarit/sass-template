@@ -5,8 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="assets/css/starter.css">
 
-  <!-- fot Material icons-->
+  <!-- for Material icons-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- for Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" type="text/javascript"></script>
 
   <title>Bootstrap npm starter</title>
 </head>
@@ -17,13 +22,31 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Apps template</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Pricing</a>
+          </li>
+        </ul>
+        <span class="navbar-text">Team Key Bridge</span>
+      </div>
+    </div>
+  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom  fixed-top"> <!-- navbar-dark-custom is a customized dark color-->
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="apps_template.html">Apps template</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="icons.html">Icon bank</a>
           </li>
         </ul>
         <span class="navbar-text">Team Key Bridge</span>
@@ -36,11 +59,27 @@
   <div class="container">
     <!--PARAGRAPH-->
     <div class="container mb-4">
-      <h1>This is a <br>
+      <h1 class="mt-4">This is a <br>
         Headline</h1>
       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit.</p>
       <small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small>
       <p class="token-label mt-2">2aad598a-5233-41e6-ab6d-10aff6c9cegg</p>
+    </div>
+
+    <!--BADGES-->
+    <div class="container mb-4">
+      <h4>Badges</h4>
+      <button type="button" class="btn btn-primary">
+        Notifications <span class="badge bg-danger">4</span>
+      </button>
+      <span class="badge rounded-pill bg-primary">Primary</span>
+      <span class="badge rounded-pill bg-secondary">Secondary</span>
+      <span class="badge rounded-pill bg-success">Success</span>
+      <span class="badge rounded-pill bg-danger">Danger</span>
+      <span class="badge rounded-pill bg-warning text-dark">Warning</span>
+      <span class="badge rounded-pill bg-info text-dark">Info</span>
+      <span class="badge rounded-pill bg-light text-dark">Light</span>
+      <span class="badge rounded-pill bg-dark">Dark</span>
     </div>
 
     <!--BUTTONS-->
@@ -80,32 +119,32 @@
       <div class="mb-2"></div>
 
       <h4 class="mt-4">Buttons with icon</h4>
-      <div class="mb-2">
-        <button type="button" class="btn btn-sm btn-ico btn-primary"><i class="material-icons me-2" aria-hidden="true">link</i>Link</button>
-        <button type="button" class="btn btn-ico btn-secondary"><i class="material-icons me-2" aria-hidden="true">settings</i>Settings</button>
-        <button type="button" class="btn btn-ico btn-success"><i class="material-icons me-2" aria-hidden="true">person_add</i>Create</button>
-        <button type="button" class="btn btn-ico btn-danger"><i class="material-icons me-2" aria-hidden="true">priority_high</i>Priority</button>
-        <button type="button" class="btn btn-ico btn-warning"><i class="material-icons me-2" aria-hidden="true">api</i>Plugins</button>
+      <div class="mb-2 d-flex flex-row">
+        <button type="button" class="btn d-flex btn-sm me-2 btn-primary"><i class="material-icons me-2" aria-hidden="true">link</i>Link</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-success"><i class="material-icons me-2" aria-hidden="true">person_add</i>Create</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-secondary"><i class="material-icons me-2" aria-hidden="true">settings</i>Settings</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-danger"><i class="material-icons me-2" aria-hidden="true">priority_high</i>Priority</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-warning"><i class="material-icons me-2" aria-hidden="true">api</i>Plugins</button>
       </div>
-      <div class="mb-2">
-        <button type="button" class="btn btn-ico btn-info"><i class="material-icons me-2" aria-hidden="true">extension</i>Extension</button>
-        <button type="button" class="btn btn-ico btn-light"><i class="material-icons me-2" aria-hidden="true">more_horiz</i>More</button>
-        <button type="button" class="btn btn-ico btn-dark"><i class="material-icons me-2" aria-hidden="true">security</i>Admin</button>
-        <button type="button" class="btn btn-link"><i class="material-icons me-2" aria-hidden="true">refresh</i>Refresh</button>
+      <div class="mb-2 d-flex flex-row">
+        <button type="button" class="btn d-flex btn-sm me-2 btn-info"><i class="material-icons me-2" aria-hidden="true">extension</i>Extension</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-light"><i class="material-icons me-2" aria-hidden="true">more_horiz</i>More</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-dark"><i class="material-icons me-2" aria-hidden="true">security</i>Admin</button>
+        <button type="button" class="btn d-flex btn-sm me-2 text-primary"><i class="material-icons me-2" aria-hidden="true">refresh</i>Refresh</button>
       </div>
       
-      <div class="mb-2">
-        <button type="button" class="btn btn-ico btn-outline-primary"><i class="material-icons me-2" aria-hidden="true">link</i>Link</button>
-        <button type="button" class="btn btn-ico btn-outline-secondary"><i class="material-icons me-2" aria-hidden="true">settings</i>Settings</button>
-        <button type="button" class="btn btn-ico btn-outline-success"><i class="material-icons me-2" aria-hidden="true">person_add</i>Create</button>
-        <button type="button" class="btn btn-ico btn-outline-danger"><i class="material-icons me-2" aria-hidden="true">priority_high</i>Priority</button>
-        <button type="button" class="btn btn-ico btn-outline-warning"><i class="material-icons me-2" aria-hidden="true">api</i>Plugins</button>
+      <div class="mb-2 d-flex flex-row">
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-primary"><i class="material-icons me-2" aria-hidden="true">link</i>Link</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-secondary"><i class="material-icons me-2" aria-hidden="true">settings</i>Settings</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-success"><i class="material-icons me-2" aria-hidden="true">person_add</i>Create</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-danger"><i class="material-icons me-2" aria-hidden="true">priority_high</i>Priority</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-warning"><i class="material-icons me-2" aria-hidden="true">api</i>Plugins</button>
       </div>
-      <div class="mb-2">
-        <button type="button" class="btn btn-ico btn-outline-info"><i class="material-icons me-2" aria-hidden="true">extension</i>Extension</button>
-        <button type="button" class="btn btn-ico btn-outline-light"><i class="material-icons me-2" aria-hidden="true">more_horiz</i>More</button>
-        <button type="button" class="btn btn-ico btn-outline-dark"><i class="material-icons me-2" aria-hidden="true">security</i>Admin</button>
-        <button type="button" class="btn btn-outline-link "><i class="material-icons me-2" aria-hidden="true">refresh</i>Refresh</button>
+      <div class="mb-2 d-flex flex-row">
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-info"><i class="material-icons me-2" aria-hidden="true">extension</i>Extension</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-light"><i class="material-icons me-2" aria-hidden="true">more_horiz</i>More</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-dark"><i class="material-icons me-2" aria-hidden="true">security</i>Admin</button>
+        <button type="button" class="btn d-flex btn-sm me-2 btn-outline-primary"><i class="material-icons me-2" aria-hidden="true">refresh</i>Refresh</button>
       </div>
 
 
@@ -191,99 +230,10 @@
       <span class="material-icons">toll</span>
       <span class="material-icons">outbound</span>
       <span class="material-icons">all_out</span>
-
-      <h4 class="mt-4">Navigation Icons</h4>
-      <span class="material-icons">close</span>
-      <span class="material-icons">menu</span>
-      <span class="material-icons">chevron_left</span>
-      <span class="material-icons">chevron_right</span>
-      <span class="material-icons">cancel</span>
-      <span class="material-icons">more_horiz</span>
-      <span class="material-icons">refresh</span>
-      <span class="material-icons">arrow_left</span>
-      <span class="material-icons">arrow_right</span>
-
-      <h4 class="mt-4">Content Icons</h4>
-      <span class="material-icons">add_circle_outline</span>
-      <span class="material-icons">send</span>
-      <span class="material-icons">content_copy</span>
-      <span class="material-icons">link</span>
-      <span class="material-icons">filter_list</span>
-      <span class="material-icons">remove_circle_outline</span>
-      <span class="material-icons">create</span>
-      <span class="material-icons">sort</span>
-      <span class="material-icons">bolt</span>
-      <span class="material-icons">flag</span>
-      <span class="material-icons">block</span>
-      <span class="material-icons">shield</span>
-      <span class="material-icons">report</span>
-      <span class="material-icons">policy</span>
-      <span class="material-icons">tag</span>
-      <span class="material-icons">stream</span>
-
-      <h4 class="mt-4">Social Icons</h4>
-      <span class="material-icons">person</span>
-      <span class="material-icons">groups</span>
-      <span class="material-icons">people</span>
-      <span class="material-icons">share</span>
-      <span class="material-icons">person_add</span>
-      <span class="material-icons">person_remove</span>
-      <span class="material-icons">public</span>
-      <span class="material-icons">notifications_none</span>
-      <span class="material-icons">notifications_active</span>
-      <span class="material-icons">construction</span>
-      <span class="material-icons">poll</span>
-      <span class="material-icons">architecture</span>
-      <span class="material-icons">add_moderator</span>
-      <span class="material-icons">pages</span>
-      <span class="material-icons">interests</span>
-
-      <h4 class="mt-4">Image Icons</h4>
-      <span class="material-icons">tune</span>
-      <span class="material-icons">circle</span>
-      <span class="material-icons">auto_awesome</span>
-      <span class="material-icons">control_point</span>
-      <span class="material-icons">adjust</span>
-      <span class="material-icons">grid_on</span>
-      <span class="material-icons">looks</span>
-
-      <h4 class="mt-4">Communication Icons</h4>
-      <span class="material-icons">call</span>
-      <span class="material-icons">chat</span>
-      <span class="material-icons">vpn_key</span>
-      <span class="material-icons">textsms</span>
-
-      <h4 class="mt-4">File Icons</h4>
-      <span class="material-icons">cloud</span>
-      <span class="material-icons">attachment</span>
-      <span class="material-icons">workspaces</span>
-      <span class="material-icons">layers</span>
-      <span class="material-icons">topic</span>
-
-      <h4 class="mt-4">Other Icons</h4>
-      <span class="material-icons">play_arrow</span>
-      <span class="material-icons">pause_circle_outline</span>
-      <span class="material-icons">check_box</span>
-      <span class="material-icons">check_box_outline_blank</span>
-      <span class="material-icons">radio_button_unchecked</span>
-      <span class="material-icons">radio_button_checked</span>
-      <span class="material-icons">warning_amber</span>
-      <span class="material-icons">error_outline</span>
-      <span class="material-icons">checklist</span>
-      <span class="material-icons">table_chart</span>
-      <span class="material-icons">priority_high</span>
-      <span class="material-icons">do_not_disturb</span>
-      <span class="material-icons">security</span>
-      <span class="material-icons">memory</span>
-      <span class="material-icons">device_hub</span>
-      <span class="material-icons">password</span>
-      <span class="material-icons">gps_fixed</span>
-      <span class="material-icons">graphic_eq</span>
-      <span class="material-icons">radar</span>
+      <br>
+      <a class="btn btn-sm btn-outline-primary me-2" href="icons.html" target="_blank">See more icons</a>
 
     </div>
-    
-
 
     <!--ACCORDION-->
     <div class="container mb-4">
@@ -345,7 +295,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><button type="button" class="btn btn-sm"><i class="material-icons text-primary" aria-hidden="true">edit</i></button></td>
+                <td><button type="button" class="btn btn-sm d-flex"><i class="material-icons text-primary" aria-hidden="true">edit</i></button></td>
                 <td><button type="button" class="btn btn-sm"><i class="material-icons text-success" aria-hidden="true">check_circle_outline</i></button></td>
                 <td><button type="button" class="btn btn-outline-success btn-sm">Good</button></td>
                 <td>Alaska01</td>
@@ -398,7 +348,7 @@
         <div class="row">
           <div class="col-sm-6">
             <div class="card">
-              <div class="card-body">
+              <div class="card-body float-start">
                 <h5 class="card-title">STS Registration</h5>
                 <p class="card-text">Re-registration will refresh the security credentials and renew the registration period.</p>
                 <a href="#" class="btn btn-primary">Go somewhere</a>
@@ -472,15 +422,15 @@
       </div>
       <div class="row mb-4">
         <div class="col">
-          <div class="container mb-4">
+          <div class="container mb-4 d-flex flex-row">
             <input type="radio" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
-            <label class="btn btn-outline-success" for="success-outlined"><i class="material-icons me-2" aria-hidden="true">check_circle_outline</i>In service</label>
+            <label class="btn btn-outline-success d-flex" for="success-outlined"><i class="material-icons me-2" aria-hidden="true">check_circle_outline</i>In service</label>
       
             <input type="radio" class="btn-check" name="options-outlined" id="warning-outlined" autocomplete="off">
-            <label class="btn btn-outline-warning" for="warning-outlined"><i class="material-icons me-2" aria-hidden="true">build</i>Development</label>
+            <label class="btn btn-outline-warning d-flex" for="warning-outlined"><i class="material-icons me-2" aria-hidden="true">build</i>Development</label>
       
             <input type="radio" class="btn-check" name="options-outlined" id="secondary-outlined" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="secondary-outlined"><i class="material-icons me-2" aria-hidden="true">pause_circle_outline</i>Stopped</label>
+            <label class="btn btn-outline-secondary d-flex" for="secondary-outlined"><i class="material-icons me-2" aria-hidden="true">pause_circle_outline</i>Stopped</label>
           </div>
         </div>
         <div class="col">
@@ -492,9 +442,42 @@
       </div>        
     </div>
 
+    <!--Leaflet-->
+    <div class="container mb-4">
+      <div id="mapid" style="width:100%; height:400px;"></div>
+      <!--Leaflet JS-->
+      <script type="text/javascript">
+        document.onreadystatechange = function () {
+            if (document.readyState == "interactive") {
+              var mymap = L.map('mapid').setView([10.31, 123.89], 13);
+                L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+                    attribution: 'Map data &copy; &lt;a href="https://www.openstreetmap.org/copyright">OpenStreetMap&lt;/a> contributors, Imagery © &lt;a href="https://www.mapbox.com/">Mapbox&lt;/a>',
+                    maxZoom: 18,
+                    id: 'mapbox/streets-v11',
+                    tileSize: 512,
+                    zoomOffset: -1,
+                    accessToken: 'pk.eyJ1IjoiYWxiZXJ0b2NsYXJpdCIsImEiOiJja255a21qNHkwMnN1Mm5taHc1YjZoNXJ3In0.gmgd7ElibToBOvsHvCxx5Q'
+                }).addTo(mymap);
+                var marker = L.marker([10.31, 123.89]).addTo(mymap);
+                var circle = L.circle([10.31, 123.89], {
+                    color: 'blue',
+                    fillColor: 'blue',
+                    fillOpacity: 0.2,
+                    radius: 1000
+                }).addTo(mymap);
+                marker.bindPopup("&lt;b>Hello world!&lt;/b>&lt;br>I am a popup.").openPopup();
+                circle.bindPopup("I am a circle.");
+            }
+        }
+        </script>
+    </div>
+
+
 </main>
 <footer>
   this is a footer
 </footer>
+
+
 </body>
 </html>

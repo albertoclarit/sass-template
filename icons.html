@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/starter.css">
+
+  <!-- for Material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- for Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" type="text/javascript"></script>
+
+  <title>Bootstrap npm starter</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom  fixed-top"> <!-- navbar-dark-custom is a customized dark color-->
+          <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarText">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="apps_template.html">Apps template</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="icons.html">Icon bank</a>
+                </li>
+              </ul>
+              <span class="navbar-text">Team Key Bridge</span>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main>
+    <!--CONTAINER-->
+    <div class="container">
+        <!--PARAGRAPH-->
+        <div class="container mb-4" style="margin-top:80px;">
+            <h1 class="mt-4">Icon Bank</h1>
+            <p>Curated icons to be used for KBW project from <a href="https://fonts.google.com/icons?selected=Material+Icons" target="_blank">Material</a> and <a href="https://icons.getbootstrap.com/" target="_blank">Bootstrap</a>.</p>
+        </div>
+
+        <!-- ICONS -->
+        <div class="container mb-4">
+        <h4>Action Icons</h4>
+        <span class="material-icons">search</span>
+        <span class="material-icons">settings</span>
+        <span class="material-icons">done</span>
+        <span class="material-icons">account_circle</span>
+        <span class="material-icons">info</span>
+        <span class="material-icons">check_circle_outline</span>
+        <span class="material-icons">delete_outline</span>
+        <span class="material-icons">logout</span>
+        <span class="material-icons">fingerprint</span>
+        <span class="material-icons">description</span>
+        <span class="material-icons">lock</span>
+        <span class="material-icons">help_outline</span>
+        <span class="material-icons">lightbulb</span>
+        <span class="material-icons">question_answer</span>
+        <span class="material-icons">perm_identity</span>
+        <span class="material-icons">arrow_right_alt</span>
+        <span class="material-icons">star_rate</span>
+        <span class="material-icons">build</span>
+        <span class="material-icons">star_rate</span>
+        <span class="material-icons">code</span>
+        <span class="material-icons">autorenew</span>
+        <span class="material-icons">lock_open</span>
+        <span class="material-icons">room</span>
+        <span class="material-icons">contact_support</span>
+        <span class="material-icons">accessibility</span>
+        <span class="material-icons">reorder</span>
+        <span class="material-icons">note_add</span>
+        <span class="material-icons">launch</span>
+        <span class="material-icons">supervisor_account</span>
+        <span class="material-icons">feedback</span>
+        <span class="material-icons">timeline</span>
+        <span class="material-icons">pending</span>
+        <span class="material-icons">accessibility_new</span>
+        <span class="material-icons">swap_horiz</span>
+        <span class="material-icons">cached</span>
+        <span class="material-icons">get_app</span>
+        <span class="material-icons">extension</span>
+        <span class="material-icons">label</span>
+        <span class="material-icons">sync_alt</span>
+        <span class="material-icons">group_work</span>
+        <span class="material-icons">privacy_tip</span>
+        <span class="material-icons">arrow_circle_up</span>
+        <span class="material-icons">sensors</span>
+        <span class="material-icons">compare_arrows</span>
+        <span class="material-icons">swap_vert</span>
+        <span class="material-icons">api</span>
+        <span class="material-icons">dangerous</span>
+        <span class="material-icons">restore</span>
+        <span class="material-icons">track_changes</span>
+        <span class="material-icons">settings_phone</span>
+        <span class="material-icons">input</span>
+        <span class="material-icons">build_circle</span>
+        <span class="material-icons">https</span>
+        <span class="material-icons">circle_notifications</span>
+        <span class="material-icons">arrow_circle_down</span>
+        <span class="material-icons">wysiwyg</span>
+        <span class="material-icons">label_important</span>
+        <span class="material-icons">file_present</span>
+        <span class="material-icons">view_module</span>
+        <span class="material-icons">donut_large</span>
+        <span class="material-icons">settings_backup_restore</span>
+        <span class="material-icons">settings_ethernet</span>
+        <span class="material-icons">mediation</span>
+        <span class="material-icons">contactless</span>
+        <span class="material-icons">anchor</span>
+        <span class="material-icons">settings_input_component</span>
+        <span class="material-icons">settings_remote</span>
+        <span class="material-icons">toll</span>
+        <span class="material-icons">outbound</span>
+        <span class="material-icons">all_out</span>
+
+        <h4 class="mt-4">Navigation Icons</h4>
+        <span class="material-icons">close</span>
+        <span class="material-icons">menu</span>
+        <span class="material-icons">chevron_left</span>
+        <span class="material-icons">chevron_right</span>
+        <span class="material-icons">cancel</span>
+        <span class="material-icons">more_horiz</span>
+        <span class="material-icons">refresh</span>
+        <span class="material-icons">arrow_left</span>
+        <span class="material-icons">arrow_right</span>
+
+        <h4 class="mt-4">Content Icons</h4>
+        <span class="material-icons">add_circle_outline</span>
+        <span class="material-icons">send</span>
+        <span class="material-icons">content_copy</span>
+        <span class="material-icons">link</span>
+        <span class="material-icons">filter_list</span>
+        <span class="material-icons">remove_circle_outline</span>
+        <span class="material-icons">create</span>
+        <span class="material-icons">sort</span>
+        <span class="material-icons">bolt</span>
+        <span class="material-icons">flag</span>
+        <span class="material-icons">block</span>
+        <span class="material-icons">shield</span>
+        <span class="material-icons">report</span>
+        <span class="material-icons">policy</span>
+        <span class="material-icons">tag</span>
+        <span class="material-icons">stream</span>
+
+        <h4 class="mt-4">Social Icons</h4>
+        <span class="material-icons">person</span>
+        <span class="material-icons">groups</span>
+        <span class="material-icons">people</span>
+        <span class="material-icons">share</span>
+        <span class="material-icons">person_add</span>
+        <span class="material-icons">person_remove</span>
+        <span class="material-icons">public</span>
+        <span class="material-icons">notifications_none</span>
+        <span class="material-icons">notifications_active</span>
+        <span class="material-icons">construction</span>
+        <span class="material-icons">poll</span>
+        <span class="material-icons">architecture</span>
+        <span class="material-icons">add_moderator</span>
+        <span class="material-icons">pages</span>
+        <span class="material-icons">interests</span>
+
+        <h4 class="mt-4">Image Icons</h4>
+        <span class="material-icons">tune</span>
+        <span class="material-icons">circle</span>
+        <span class="material-icons">auto_awesome</span>
+        <span class="material-icons">control_point</span>
+        <span class="material-icons">adjust</span>
+        <span class="material-icons">grid_on</span>
+        <span class="material-icons">looks</span>
+
+        <h4 class="mt-4">Communication Icons</h4>
+        <span class="material-icons">call</span>
+        <span class="material-icons">chat</span>
+        <span class="material-icons">vpn_key</span>
+        <span class="material-icons">textsms</span>
+
+        <h4 class="mt-4">File Icons</h4>
+        <span class="material-icons">cloud</span>
+        <span class="material-icons">attachment</span>
+        <span class="material-icons">workspaces</span>
+        <span class="material-icons">layers</span>
+        <span class="material-icons">topic</span>
+
+        <h4 class="mt-4">Other Icons</h4>
+        <span class="material-icons">play_arrow</span>
+        <span class="material-icons">pause_circle_outline</span>
+        <span class="material-icons">check_box</span>
+        <span class="material-icons">check_box_outline_blank</span>
+        <span class="material-icons">radio_button_unchecked</span>
+        <span class="material-icons">radio_button_checked</span>
+        <span class="material-icons">warning_amber</span>
+        <span class="material-icons">error_outline</span>
+        <span class="material-icons">checklist</span>
+        <span class="material-icons">table_chart</span>
+        <span class="material-icons">priority_high</span>
+        <span class="material-icons">do_not_disturb</span>
+        <span class="material-icons">security</span>
+        <span class="material-icons">memory</span>
+        <span class="material-icons">device_hub</span>
+        <span class="material-icons">password</span>
+        <span class="material-icons">gps_fixed</span>
+        <span class="material-icons">graphic_eq</span>
+        <span class="material-icons">radar</span>
+
+        </div>
+
+    </main>
+<footer>
+  this is a footer
+</footer>
+
+
+</body>
+</html>
