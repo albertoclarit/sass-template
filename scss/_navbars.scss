@@ -1,4 +1,4 @@
-// navigation
+// navigations
 #sidenav {
     height: 100vh;
     min-width: 200px;
@@ -6,8 +6,7 @@
 }
 
 #sidenav a {
-    color:$light;
-}
+    color:$light; 
 
 #sidenav a.active:hover {
     color:#fff;
