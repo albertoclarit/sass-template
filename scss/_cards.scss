@@ -4,17 +4,11 @@
     box-shadow: 0 .5rem 1rem rgba($dark, .08) !important;
 }
 
-pre {
-    font-size: .875em;
-}
-
-pre.snippet {
-
-}
-
-pre.snippet code {
+div.snippet code {
+    font-size: 90%;
     display:block;
     background: $dark;
     color: $light;
     border-radius: .3rem;
+    padding: 1rem;
 }
