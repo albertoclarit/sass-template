@@ -35,7 +35,7 @@
       </div>
     </div>
   </nav>
-  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="dark_nav"> <!-- #dark_nav is a customized dark color-->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top dark_nav_custom"> <!-- #dark_nav is a customized dark color-->
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -358,7 +358,9 @@
               <div class="card-body">
                 <h5 class="card-title">Special title treatment</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="snippet">
+                  <code>npm install</code>
+                </div>
               </div>
             </div>
           </div>
@@ -374,12 +376,22 @@
               <div class="card-body">
                 <h5 class="card-title">Special title treatment</h5>
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <div class="snippet">
+                  <code>
+                    <span class="text-primary">new</span> Webpack.ProvidePlugin({ <br>
+                      <span class="text-info">$</span>:  <span class="text-warning">"jquery"</span>, <br>
+                      <span class="text-info">jQuery</span>: <span class="text-warning">"jquery"</span>, <br>
+                      <span class="text-info">jquery</span>: <span class="text-warning">"jquery"</span>, <br>
+                      <span class="text-warning">"window.$"</span>: <span class="text-warning">"jquery"</span>, <br>
+                      <span class="text-warning">"window.jQuery"</span>: <span class="text-warning">"jquery"</span> <br>
+                    })
+
+                  </code>
+                </div>
               </div>
             </div>
           </div>
 
-          
         </div>
       </div>
         
