@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/starter.css">
+
+  <!-- fot Material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- for Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" type="text/javascript"></script>
+
+  <!-- for Charts -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <title>Bootstrap npm starter</title>
+</head>
+
+<!-- i put style coz it's not working in SCSS -->
+<body>
+  
+    <div class="row d-md-block m-0 p-0">
+    <div class="col-md-2 me-auto bg-dark p-4 float-start sidenav"> 
+      KEYBRIDGE logo
+      <hr>
+      <ul class="nav nav-pills navbar-dark flex-column mb-auto"> 
+        <li class="nav-item mb-2">Admin</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">
+            <i class="material-icons me-2">dashboard</i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">security</i>
+            STS clients
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">group_work</i>
+            SAS peers
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">graphic_eq</i>
+            ESC sensors
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">chat</i>
+            Messaging
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">settings</i>
+            Settings
+          </a>
+        </li>
+
+        <li><hr></li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">api</i>
+            API resources
+          </a>
+        </li>
+        <li class="nav-item mb-5">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">description</i>
+            Documentation
+          </a>
+        </li>
+        
+        <li class="nav-item mb-2">Switch access</li>
+        <li class="nav-item">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-ico btn-success">
+              <i class="material-icons float-start" aria-hidden="true">person_add</i>
+              User portal
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <main class="m-0 p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom"> <!-- #navbar-dark is a customized dark color-->
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <!-- Icon base -->
+            <a class="text-reset me-3" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- Notifications -->
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">1</span>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+      
+            <!-- Avatar -->
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                class="rounded-circle"
+                height="25"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-0">
+        <div class="row m-4">
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Sample bar</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <canvas id="myChart" width="400" height="150"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Sample line</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <canvas id="myChart2" width="400" height="150"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Sample radar</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <canvas id="myChart3" width="400" height="150"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Sample doughnut</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <canvas id="myChart4" width="400" height="150px"></canvas>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Leaflet</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <div id="mapid" style="width:100%; height:300px;"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start">
+                <h3>Forms</h3>
+                <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <div class="col mb-4">
+                    <input class="form-control col" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                </div>
+                <div class="col mb-4">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type the text here">
+                    <label for="exampleFormControlInput1" class="form-label">Your label here is optional</label>
+                </div>
+                <div class="col input-group mb-4">
+                    <div class="input-group-text">
+                      <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                    </div>
+                    <input type="text" class="form-control" value="Check box sample" aria-label="Text input with checkbox">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                      </div>
+                      <input type="text" class="form-control" value="Check box sample" aria-label="Text input with checkbox">
+                      <div class="input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input">
+                      </div>
+                      <input type="text" class="form-control" value="Check box sample" aria-label="Text input with checkbox">
+                </div>
+
+                <div class="col">
+                    <div class="mb-3">
+                      <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-xl-6">
+              <div class="card mb-4 shadow">
+                  <div class="card-body float-start">
+                      <h3>Table</h3>
+                      <p>Add a bit of text over here. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                      <hr>
+                      <table class="table table-hover text-secondary">
+                      <thead>
+                          <tr class="table-secondary">
+                          <td>Client</td>
+                          <td>Scope</td>
+                          <td>Ping</td>
+                          <td>Sensor</td>
+                          <td>Peer</td>
+                          <td>Action</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>                   
+                          <td>Alaska01</td>
+                          <td>Alaska1</td>
+                          <td>15</td>
+                          <td><button type="button" class="btn btn-sm"><i class="material-icons text-success" aria-hidden="true">check_circle_outline</i></button></td>
+                          <td><button type="button" class="btn btn-outline-success btn-sm">Good</button></td>
+                          <td>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">edit</i></button>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">delete</i></button>
+                          </td>
+                          </tr>   
+                          <tr class="table-warning">                   
+                          <td>Alaska01</td>
+                          <td>Alaska1</td>
+                          <td>15</td>
+                          <td><button type="button" class="btn btn-link btn-sm"><i class="material-icons text-secondary" aria-hidden="true">remove_circle_outline</i></button></td>
+                          <td><button type="button" class="btn btn-outline-danger btn-sm">Bad</button></td>
+                          <td>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">edit</i></button>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">delete</i></button>
+                          </td>
+                          </tr>   
+                          <tr>                   
+                          <td>Alaska01</td>
+                          <td>Alaska1</td>
+                          <td>15</td>
+                          <td><button type="button" class="btn btn-sm"><i class="material-icons text-secondary" aria-hidden="true">remove_circle_outline</i></button></td>
+                          <td><button type="button" class="btn btn-outline-success btn-sm">Good</button></td>
+                          <td>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">edit</i></button>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">delete</i></button>
+                          </td>
+                          </tr> 
+                          <tr>                   
+                          <td>Alaska01</td>
+                          <td>Alaska1</td>
+                          <td>15</td>
+                          <td><button type="button" class="btn btn-sm"><i class="material-icons text-warning" aria-hidden="true">build</i></button></td>
+                          <td><button type="button" class="btn btn-outline-success btn-sm">Good</button></td>
+                          <td>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">edit</i></button>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">delete</i></button>
+                          </td>
+                          </tr> 
+                          <tr>                   
+                          <td>Alaska01</td>
+                          <td>Alaska1</td>
+                          <td>15</td>
+                          <td><button type="button" class="btn btn-sm"><i class="material-icons text-warning" aria-hidden="true">build</i></button></td>
+                          <td><button type="button" class="btn btn-outline-success btn-sm">Good</button></td>
+                          <td>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">edit</i></button>
+                              <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">delete</i></button>
+                          </td>
+                          </tr> 
+                      </tbody>    
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="col-12">
+            <div class="card mb-4 shadow">
+              <div class="card-body float-start table-responsive"> <!-- table-responsive to enable scrolling-->
+                  <h3>Responsive Table</h3>
+                  <p>This table is responsive. It enables scrolling for smaller screens</p>
+                  <hr>
+                  <table class="table table-hover text-secondary">
+                      <thead>
+                          <tr class="table-secondary">
+                          <td>sample</td>
+                          <td>Header 1</td>
+                          <td>Header 2</td>
+                          <td>Header 3</td>
+                          <td>Header 4</td>
+                          <td>Header 5</td>
+                          <td>Header 6</td>
+                          <td>Header 7</td>
+                          <td>Header 8</td>
+                          <td>Header 9</td>
+                          <td>Header 10</td>
+                          <td>Header 11</td>
+                          <td>Header 12</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>                                                
+                              <td>
+                                  <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">check</i></button>
+                              </td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                          </tr>  
+                          <tr>                                                
+                              <td>
+                                  <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">check</i></button>
+                              </td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                          </tr>
+                          <tr>                                                
+                              <td>
+                                  <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">check</i></button>
+                              </td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                          </tr>
+                          <tr>                                                
+                              <td>
+                                  <button type="button" class="btn btn-sm"><i class="material-icons" aria-hidden="true">check</i></button>
+                              </td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                              <td>Cell</td>
+                          </tr> 
+                      </tbody>    
+                  </table>
+                </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </main>
+
+<!--Leaflet JS-->
+<script type="text/javascript">
+  document.onreadystatechange = function () {
+      if (document.readyState == "interactive") {
+        var mymap = L.map('mapid').setView([10.31, 123.89], 13);
+          L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+              attribution: 'Map data &copy; &lt;a href="https://www.openstreetmap.org/copyright">OpenStreetMap&lt;/a> contributors, Imagery © &lt;a href="https://www.mapbox.com/">Mapbox&lt;/a>',
+              maxZoom: 18,
+              id: 'mapbox/streets-v11',
+              tileSize: 512,
+              zoomOffset: -1,
+              accessToken: 'pk.eyJ1IjoiYWxiZXJ0b2NsYXJpdCIsImEiOiJja255a21qNHkwMnN1Mm5taHc1YjZoNXJ3In0.gmgd7ElibToBOvsHvCxx5Q'
+          }).addTo(mymap);
+          var marker = L.marker([10.31, 123.89]).addTo(mymap);
+          var circle = L.circle([10.31, 123.89], {
+              color: 'blue',
+              fillColor: 'blue',
+              fillOpacity: 0.2,
+              radius: 1000
+          }).addTo(mymap);
+          marker.bindPopup("&lt;b>Hello world!&lt;/b>&lt;br>I am a popup.").openPopup();
+          circle.bindPopup("I am a circle.");
+      }
+  }
+</script>
+
+<!--Bar Chart JS -->
+<script>
+  var ctx = document.getElementById('myChart').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+              label: '# of Votes',
+              data: [8, 12, 3, 5, 2, 3],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+<!--Line Chart JS -->
+<script>
+  var ctx = document.getElementById('myChart2').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+              label: '# of Votes',
+              data: [18, 5, 15, 5, 20, 23],
+              fill: false,
+              borderColor: 'rgb(75, 192, 192)',
+              tension: 0.1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+<!--Radar Chart JS -->
+<script>
+  var ctx = document.getElementById('myChart3').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+      type: 'radar',
+      data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+              label: '# of Votes',
+              data: [18, 5, 15, 5, 20, 23],
+              fill: false,
+              borderColor: 'rgb(75, 192, 192)',
+              tension: 0.1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+<!--Doughnut Chart JS -->
+<script>
+  var ctx = document.getElementById('myChart4').getContext('2d');
+
+  var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+              label: '# of Votes',
+              data: [18, 5, 15, 5, 20, 23],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true
+              }
+          }
+      }
+  });
+</script>
+
+
+
+    
+</div>
+</body>
+</html>
