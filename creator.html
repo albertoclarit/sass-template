@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/css/starter.css">
+
+  <!-- fot Material icons-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <title>Bootstrap npm starter</title>
+</head>
+
+<!-- i put style coz it's not working in SCSS -->
+<body>
+  
+  <div class="row d-md-block m-0 p-0">
+    <div class="col-md-2 me-auto bg-dark p-4 float-start sidenav"> 
+      KEYBRIDGE logo
+      <hr>
+      <ul class="nav nav-pills navbar-dark flex-column mb-auto"> 
+        <li class="nav-item mb-2">Admin</li>
+        <li class="nav-item">
+          <a href="#" class="nav-link active">
+            <i class="material-icons me-2">dashboard</i>
+            Dashboard
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">security</i>
+            STS clients
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">group_work</i>
+            SAS peers
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">graphic_eq</i>
+            ESC sensors
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">chat</i>
+            Messaging
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">settings</i>
+            Settings
+          </a>
+        </li>
+
+        <li><hr></li>
+
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">api</i>
+            API resources
+          </a>
+        </li>
+        <li class="nav-item mb-5">
+          <a href="#" class="nav-link">
+            <i class="material-icons me-2">description</i>
+            Documentation
+          </a>
+        </li>
+        
+        <li class="nav-item mb-2">Switch access</li>
+        <li class="nav-item">
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-ico btn-success">
+              <i class="material-icons float-start" aria-hidden="true">person_add</i>
+              User portal
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+
+    <main class="m-0 p-0">
+      <nav class="navbar navbar-expand-lg navbar-dark navbar-dark-custom"> <!-- #navbar-dark is a customized dark color-->
+        <div class="container-fluid">
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
+          </div>
+          <div class="d-flex align-items-center">
+            <!-- Icon base -->
+            <a class="text-reset me-3" href="#">
+              <i class="fas fa-shopping-cart"></i>
+            </a>
+            <!-- Notifications -->
+            <a
+              class="text-reset me-3 dropdown-toggle hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="fas fa-bell"></i>
+              <span class="badge rounded-pill badge-notification bg-danger">1</span>
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">Some news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Another news</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </li>
+            </ul>
+      
+            <!-- Avatar -->
+            <a
+              class="dropdown-toggle d-flex align-items-center hidden-arrow"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="https://mdbootstrap.com/img/new/avatars/2.jpg"
+                class="rounded-circle"
+                height="25"
+                alt=""
+                loading="lazy"
+              />
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-end"
+              aria-labelledby="navbarDropdownMenuLink"
+            >
+              <li>
+                <a class="dropdown-item" href="#">My profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Settings</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container-fluid p-0">
+        <div class="row my-4">
+          <div class="mx-auto col-lg-10 col-xl-8">
+            <div class="card mb-4 shadow">
+              <div class="card-body">
+                <div class="row mb-4">
+                  <div class="col">
+                    <h2 class="mb-3 float-start">Create new book</h2>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-primary float-end ms-2">Add chapter</button>
+                    <button type="button" class="btn btn-outline-primary float-end">Chapters</button>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <select class="form-select col" aria-label="Default select example">
+                      <option selected>Book title</option>
+                      <option value="1">Book One</option>
+                      <option value="2">Book Two</option>
+                      <option value="3">Book Three</option>
+                    </select>
+                    <label>Book title (limit to 3 words)</label>
+                  </div>
+                  <div class="col">
+                    <select class="form-select col" aria-label="Default select example">
+                      <option selected>English</option>
+                      <option value="1">Language 1</option>
+                      <option value="2">Language 2</option>
+                      <option value="3">Language 3</option>
+                    </select>
+                    <label>Choose language</label>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <input class="form-control" type="file" id="formFile">
+                    <label>Book's hero image (960 x 256 pixels recommended)</label>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <input class="form-control" type="file" id="formFile">
+                    <label>Book's thumbnail (200 x 200 pixels recommended)</label>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="you@email.com">
+                    <label>Email for editorial inquiries</label>
+                  </div>
+                  <div class="col">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex: 2021 Key Bridge Wireless LLC">
+                    <label>Copyright statement without the word "Copyright"</label>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <button type="button" class="btn btn-outline-danger float-start d-flex">
+                      <i class="material-icons me-2" aria-hidden="true">delete</i>
+                      Delete
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-primary float-end ms-2">Save</button>
+                    <button type="button" class="btn btn-success float-end ms-2">Publish</button>
+                    <button type="button" class="btn btn-outline-primary float-end">Preview</button>
+                  </div>
+                </div>
+                
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    
+</div>
+</body>
+</html>
