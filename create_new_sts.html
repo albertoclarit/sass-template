@@ -174,79 +174,90 @@
             <div class="card mb-4 shadow">
               <div class="card-body">
                 <div class="row mb-4">
-                  <div class="col">
-                    <h2 class="mb-3 float-start">Create new book</h2>
+                  <div class="col-12">
+                    <h2 class="mb-3">Register a new STS client</h2>
+                    <p>RFC 7591 OAuth 2.0 Dynamic Client Registration Protocol. <br>
+                    This is a manual version of the Security Token Service automated client registration API.</p>
                   </div>
-                  <div class="col">
-                    <button type="button" class="btn btn-primary float-end ms-2">Add chapter</button>
-                    <button type="button" class="btn btn-outline-primary float-end">Chapters</button>
-                  </div>
+                  <div class="col"></div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col">
                     <select class="form-select col" aria-label="Default select example">
-                      <option selected>Book title</option>
-                      <option value="1">Book One</option>
-                      <option value="2">Book Two</option>
-                      <option value="3">Book Three</option>
+                      <option selected>Organization</option>
+                      <option value="1">Org 2</option>
+                      <option value="2">Org 3</option>
+                      <option value="3">Org 4</option>
                     </select>
-                    <label class="form-label">Book title (limit to 3 words)</label>
+                    <label class="form-label">Organization to which this instance will be bound</label>
                   </div>
                   <div class="col">
-                    <select class="form-select col" aria-label="Default select example">
-                      <option selected>English</option>
-                      <option value="1">Language 1</option>
-                      <option value="2">Language 2</option>
-                      <option value="3">Language 3</option>
-                    </select>
-                    <label class="form-label">Choose language</label>
                   </div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col">
-                    <input class="form-control" type="file" id="formFile">
-                    <label class="form-label">Book's hero image (960 x 256 pixels recommended)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Initial Access Token">
+                    <label class="form-label">A JSON Web Token signed by your Organization X.509 certificate private key</label>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn d-flex btn-sm me-2 btn-outline-primary"><i class="material-icons me-2 fs-5" aria-hidden="true">vpn_key</i>Generate IAT</button>
                   </div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col">
-                    <input class="form-control" type="file" id="formFile">
-                    <label class="form-label">Book's thumbnail (200 x 200 pixels recommended)</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Client name">
+                    <label class="form-label">Name of the client instance. This is typically a DNS host name.</label>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Client UID">
+                    <label class="form-label">A globally unique ID for this client. This is typically your computer's address or a UUID.</label>
                   </div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="you@email.com">
-                    <label class="form-label">Email for editorial inquiries</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Software  (e.g. StsClientAutomation)">
+                    <label class="form-label">(optional) Software identifier</label>
                   </div>
                   <div class="col">
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ex: 2021 Key Bridge Wireless LLC">
-                    <label class="form-label">Copyright statement without the word "Copyright"</label>
-                  </div>
-                </div>
-
-                <div class="row mb-4">
-                  <div class="col">
-                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Software version (e.g. v1.0.0)">
+                    <label class="form-label">(optional) Software version identifier</label>
                   </div>
                 </div>
 
                 <div class="row mb-4">
                   <div class="col">
-                    <button type="button" class="btn btn-outline-danger float-start d-flex">
-                      <i class="material-icons me-2" aria-hidden="true">delete</i>
-                      Delete
-                    </button>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Contact email">
+                    <label class="form-label">(optional) Email address to receive automated notification messages.</label>
                   </div>
                   <div class="col">
-                    <button type="button" class="btn btn-primary float-end ms-2">Save</button>
-                    <button type="button" class="btn btn-success float-end ms-2">Publish</button>
-                    <button type="button" class="btn btn-outline-primary float-end">Preview</button>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Token Endpoint Auth Method" disabled>
+                    <label class="form-label">RFC 7591 authentication method for the token endpoint</label>
+                  </div>
+                </div>
+
+                <div class="row mb-4">
+                  <div class="col">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Grant types" disabled>
+                    <label class="form-label">OAuth 2.0 grant types the client can use</label>
+                  </div>
+                  <div class="col">
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Response types" disabled>
+                    <label class="form-label">OAuth 2.0 response types the client can specify</label>
+                  </div>
+                </div>
+
+
+
+                <div class="row mb-4">
+                  <div class="col">
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-success float-end ms-2">Register new STS client</button>
+                    <button type="button" class="btn btn-outline-primary float-end">Cancel</button>
                   </div>
                 </div>
                 
